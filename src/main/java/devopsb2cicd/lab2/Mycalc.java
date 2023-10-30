@@ -13,7 +13,7 @@ public class Mycalc
         System.out.print("Enter the first number: ");
         num1 = scanner.nextDouble();
 
-        System.out.print("Enter an operator (+ or -): ");
+        System.out.print("Enter an operator (+, -, or *): ");
         operator = scanner.next().charAt(0);
 
         System.out.print("Enter the second number: ");
@@ -30,11 +30,17 @@ public class Mycalc
                 result = num1 - num2;
                 System.out.println("Result: " + num1 + " - " + num2 + " = " + result);
                 break;
+            case '*':
+                result = num1 * num2;
+                System.out.println("Result: " + num1 + " * " + num2 + " = " + result);
+                break;
             default:
-                System.out.println("Invalid operator. Please use + or -.");
+                System.out.println("Invalid operator. Please use +, -, or *.");
         }
 
         scanner.close();
     }
     
 }
+
+//add a multiplication function to the calculator
